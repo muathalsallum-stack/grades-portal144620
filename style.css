@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma;
+}
+
+body{
+    background:linear-gradient(135deg,#0f8b8d,#145374);
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+}
+
+.top{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    background:#ffc107;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    margin-bottom:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.top h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.top p{
+    opacity:.9;
+}
+
+.search-box{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    margin-bottom:30px;
+}
+
+input{
+    width:100%;
+    padding:18px;
+    border:1px solid #ddd;
+    border-radius:14px;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+button{
+    width:100%;
+    border:none;
+    padding:18px;
+    border-radius:14px;
+    background:#19a7ce;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#117a9b;
+}
+
+.result-card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    animation:fade .4s ease;
+}
+
+.course-title{
+    color:#145374;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.grade-row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.grade-row:last-child{
+    border:none;
+}
+
+.label{
+    font-weight:bold;
+    color:#333;
+}
+
+.value{
+    color:#19a7ce;
+    font-weight:bold;
+}
+
+.print-btn{
+    margin-top:20px;
+    background:#28a745;
+}
+
+.print-btn:hover{
+    background:#1f7d35;
+}
+
+.not-found{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    color:#666;
+    font-size:20px;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:600px){
+
+    .top h1{
+        font-size:30px;
+    }
+
+    .grade-row{
+        flex-direction:column;
+        gap:8px;
+    }
+}
+
+@media print{
+
+    body{
+        background:white;
+    }
+
+    .search-box,
+    .top button{
+        display:none;
+    }
+
+    button{
+        display:none;
+    }
+
+    .result-card{
+        box-shadow:none;
+        border:1px solid #ddd;
+    }
+}
